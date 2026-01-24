@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Hill Crop Science | Science for Sustainable Growth</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <nav id="navbar">
+        <!--<div class="logo"><img src="resource/2.png" alt="Green Hill"></div>-->
+        <div class="logo">GREEN HILL<span>CROP SCIENCE</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Our Solutions</a></li>
+            <li><a href="#contact" class="nav-btn">Inquiry</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge">Established 2022 • Dhaka, Bangladesh</span>
+            <h1>Cultivating Excellence <br><span class="text-gradient">Through Science.</span></h1>
+            <p>Green Hill Crop Science is a premier agricultural solutions provider dedicated to the 
+                advancement of modern farming. By bridging the gap between laboratory science and field-level 
+                application, we provide farmers with the tools they need to achieve sustainable productivity. 
+                Our commitment to "Science for Growth" ensures that every product we manufacture—from specialized 
+                plant growth regulators to organic pesticides—is designed with both the farmer's profit and the 
+                environment's health in mind.</p>
+            <div class="hero-btns">
+                <a href="#products" class="btn primary">View Solutions</a>
+                <a href="#about" class="btn secondary">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="stats" class="stats-container">
+        <div class="stat-card">
+            <h2 class="counter" data-target="500">0</h2>
+            <p>Farmers Empowered</p>
+        </div>
+        <div class="stat-card">
+            <h2 class="counter" data-target="25">0</h2>
+            <p>Expert Agronomists</p>
+        </div>
+        <div class="stat-card">
+            <h2 class="counter" data-target="100">0</h2>
+            <p>Product Efficacy %</p>
+        </div>
+    </section>
+
+    <section id="about" class="about-premium reveal">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-content">
+                    <span class="sub-heading">About Green Hill</span>
+                    <h2>Pioneering the Future of <span class="text-gradient">Crop Protection</span></h2>
+                    <p>Based in the heart of Uttara, our R&D team works tirelessly to formulate products that withstand the unique tropical challenges of Bangladesh. We don't just sell chemicals; we provide a blueprint for harvest success.</p>
+                    
+                    <div class="value-strip">
+                        <div class="value-item">
+                            <div class="value-icon"><i data-lucide="microscope"></i></div>
+                            <div>
+                                <h4>Science-First Approach</h4>
+                                <p>R&D focused formulations tested specifically for local soil conditions.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon"><i data-lucide="leaf"></i></div>
+                            <div>
+                                <h4>Eco-Conscious Chemistry</h4>
+                                <p>Sustainable chemistry that protects both the environment and the farmer's profit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="image-stack">
+                        <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=800&q=80" alt="Agri Research" class="img-main">
+                        <div class="experience-badge">
+                            <h3>4+</h3>
+                            <p>Years of Direct Innovation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="solutions-rich reveal">
+        <div class="center-title">
+            <h3 class="section-title">Our Solutions</h3>
+            <h2>Scientific Plant Protection</h2>
+        </div>
+        <div class="grid">
+            <div class="rich-card">
+                <div class="icon-box"><i data-lucide="shield-check"></i></div>
+                <h3>Advanced Protection</h3>
+                <p>Micro-encapsulated fungicides and insecticides designed for longer-lasting protection against tropical pests.</p>
+            </div>
+            <div class="rich-card">
+                <div class="icon-box"><i data-lucide="sprout"></i></div>
+                <h3>Bio-Stimulants</h3>
+                <p>Advanced hormone-based growth regulators that ensure uniform flowering and maximum grain filling.</p>
+            </div>
+            <div class="rich-card">
+                <div class="icon-box"><i data-lucide="droplets"></i></div>
+                <h3>Liquid Nutrition</h3>
+                <p>Chelated micronutrients for rapid absorption, fixing soil deficiencies in under 48 hours for immediate results.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-premium reveal">
+        <div class="container">
+            <div class="contact-card">
+                <div class="contact-sidebar">
+                    <h3>Get in Touch</h3>
+                    <p>Connect with our head office for distribution inquiries or field technical support across Bangladesh.</p>
+                    <div class="contact-links">
+                        <div class="c-link"><i data-lucide="map-pin"></i> <span>H-04, R-07, S-12, Uttara, Dhaka-1230</span></div>
+                        <div class="c-link"><i data-lucide="mail"></i> <span>info@greenhillcrop.com</span></div>
+                        <div class="c-link"><i data-lucide="phone"></i> <span>+880 171-0000000</span></div>
+                    </div>
+                </div>
+                <div class="contact-form-area">
+                    <form id="agriForm">
+                        <div class="form-row">
+                            <input type="text" placeholder="Full Name" required>
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <select required>
+                            <option value="" disabled selected>Select Inquiry Type</option>
+                            <option value="product">Product Inquiry</option>
+                            <option value="distributor">Distributorship</option>
+                            <option value="tech">Technical Support</option>
+                        </select>
+                        <textarea placeholder="Tell us how we can help your farm..." rows="4" required></textarea>
+                        <button type="submit" class="btn primary full-width">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#f4f7f5"></path>
+            </svg>
+        </div>
+        <div class="container footer-grid">
+            <div class="footer-col brand-info">
+                <div class="logo">GREEN HILL<span>CROP SCIENCE</span></div>
+                <p class="footer-desc">Sustainable chemistry and precision science for the heart of Bangladesh's farming communities. Empowering growth since 2022.</p>
+                <div class="social-links">
+                    <a href="#"><i data-lucide="facebook"></i></a>
+                    <a href="#"><i data-lucide="linkedin"></i></a>
+                    <a href="#"><i data-lucide="instagram"></i></a>
+                    <a href="#"><i data-lucide="twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Our Science</a></li>
+                    <li><a href="#products">Product Portfolio</a></li>
+                    <li><a href="#contact">Contact Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-col">
+                <h4 class="footer-title">Contact Office</h4>
+                <div class="footer-contact-item"><i data-lucide="mail"></i> <p>info@greenhillcrop.com</p></div>
+                <div class="footer-contact-item"><i data-lucide="map-pin"></i> <p>H-04, R-07, S-12, Uttara,<br>Dhaka-1230, Bangladesh</p></div>
+                <div class="footer-contact-item"><i data-lucide="phone"></i> <p>+880 171-0000000</p></div>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <div class="container bottom-flex">
+                <p>&copy; 2026 Green Hill Crop Science. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
