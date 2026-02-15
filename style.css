@@ -196,3 +196,48 @@ input:focus, textarea:focus { border-color: var(--accent); background: white; ou
     .mv-grid { grid-template-columns: 1fr; }
     .mv-card { padding: 3rem 2rem; }
 }
+
+/* Cart Icon Styling in Nav */
+.cart-link-container {
+    margin: 0 1rem;
+    position: relative;
+}
+
+.cart-icon-wrapper {
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+nav:not(.scrolled) .cart-icon-wrapper {
+    color: white;
+}
+
+#home-cart-count {
+    background: var(--secondary);
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -12px;
+    font-weight: 800;
+}
+
+/* Force 3-Column Grid for Products */
+@media (min-width: 1025px) {
+    .grid, .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 2.5rem;
+    }
+}
+
+/* Maintain consistency on smaller desktops */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .grid, .product-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
