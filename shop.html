@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenHill Shop | Scientific Agricultural Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop-style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <nav id="navbar" class="scrolled">
+        <div class="logo">GREENHILL<span>CROP SCIENCE</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#products">Research</a></li>
+            <li><a href="#" class="active">Shop</a></li>
+            <li class="cart-trigger" onclick="toggleCart()">
+                <i data-lucide="shopping-basket"></i>
+                <span id="cart-count">0</span>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="shop-hero">
+        <div class="container">
+            <span class="sub-heading" style="color: white;">Direct to Farm</span>
+            <h1>Our <span class="text-gradient">Products</span></h1>
+        </div>
+    </header>
+
+    <main class="container shop-container">
+        <aside class="shop-filter">
+            <h3>Categories</h3>
+            <ul>
+                <li><button class="filter-btn active">All Products</button></li>
+                <li><button class="filter-btn">Fungicides</button></li>
+                <li><button class="filter-btn">Bio-Stimulants</button></li>
+                <li><button class="filter-btn">Nutrition</button></li>
+            </ul>
+        </aside>
+
+        <section class="product-grid" id="product-display">
+            </section>
+    </main>
+
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Your Selection</h3>
+            <button onclick="toggleCart()"><i data-lucide="x"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-msg">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total">
+                <span>Total:</span>
+                <span id="cartTotal">৳ 0</span>
+            </div>
+            <button class="btn primary full-width">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="shop-script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
