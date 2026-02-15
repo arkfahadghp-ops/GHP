@@ -1,70 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenHill Shop | Scientific Agricultural Solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="shop-style.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
-</head>
-<body>
+/* Shop Specific Styles */
+.shop-hero {
+    background: linear-gradient(rgba(14, 108, 92, 0.9), rgba(14, 108, 92, 0.8)), 
+                url('https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=1200&q=80');
+    padding: 120px 0 60px;
+    text-align: center;
+}
 
-    <nav id="navbar" class="scrolled">
-        <div class="logo">GREENHILL<span>CROP SCIENCE</span></div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#products">Research</a></li>
-            <li><a href="#" class="active">Shop</a></li>
-            <li class="cart-trigger" onclick="toggleCart()">
-                <i data-lucide="shopping-basket"></i>
-                <span id="cart-count">0</span>
-            </li>
-        </ul>
-    </nav>
+.shop-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 3rem;
+    padding: 4rem 5%;
+}
 
-    <header class="shop-hero">
-        <div class="container">
-            <span class="sub-heading" style="color: white;">Direct to Farm</span>
-            <h1>Our <span class="text-gradient">Products</span></h1>
-        </div>
-    </header>
+/* Filters */
+.filter-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-    <main class="container shop-container">
-        <aside class="shop-filter">
-            <h3>Categories</h3>
-            <ul>
-                <li><button class="filter-btn active">All Products</button></li>
-                <li><button class="filter-btn">Fungicides</button></li>
-                <li><button class="filter-btn">Bio-Stimulants</button></li>
-                <li><button class="filter-btn">Nutrition</button></li>
-            </ul>
-        </aside>
+.filter-btn.active { color: var(--primary); font-weight: 800; border-left: 3px solid var(--accent); }
 
-        <section class="product-grid" id="product-display">
-            </section>
-    </main>
+/* Product Cards */
+.product-card {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    border: 1px solid #f0f0f0;
+}
 
-    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
-    <div class="cart-drawer" id="cartDrawer">
-        <div class="cart-header">
-            <h3>Your Selection</h3>
-            <button onclick="toggleCart()"><i data-lucide="x"></i></button>
-        </div>
-        <div class="cart-items" id="cartItems">
-            <p class="empty-msg">Your cart is empty.</p>
-        </div>
-        <div class="cart-footer">
-            <div class="total">
-                <span>Total:</span>
-                <span id="cartTotal">৳ 0</span>
-            </div>
-            <button class="btn primary full-width">Proceed to Checkout</button>
-        </div>
-    </div>
+.product-card:hover { transform: translateY(-5px); border-color: var(--accent); }
 
-    <script src="shop-script.js"></script>
-    <script>lucide.createIcons();</script>
-</body>
-</html>
+.product-img {
+    width: 100%;
+    height: 200px;
+    background: #f9f9f9;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.product-card h4 { color: var(--primary); margin-bottom: 0.5rem; }
+.price { color: var(--secondary); font-weight: 800; font-size: 1.2rem; display: block; margin-bottom: 1rem; }
+
+/* Cart Drawer */
+.cart-trigger { 
+    cursor: pointer; 
+    position: relative; 
+    color: var(--primary); 
+    display: flex; 
+    align-items: center; 
+}
+
+#cart-count {
+    background: var(--secondary);
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    right: -10px;
+}
+
+.cart-drawer {
+    position: fixed;
+    right: -400px;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background: white;
+    z-index: 2000;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-drawer.open { right: 0; }
+
+.cart-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 1999;
+}
+
+.cart-header { padding: 2rem; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; }
+.cart-items { flex: 1; padding: 2rem; overflow-y: auto; }
+.cart-footer { padding: 2rem; background: #f9fbf9; }
+
+.cart-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .shop-container { grid-template-columns: 1fr; }
+    .cart-drawer { width: 100%; right: -100%; }
+}
