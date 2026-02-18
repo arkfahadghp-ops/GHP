@@ -1,5 +1,5 @@
 const products = [
-    { id: 1, name: "GreenShield Fungicide", price: 1250, category: "Fungicides", img: "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=300&q=80" },
+    { id: 1, name: "Zypsum", price: 600, category: "Nutrition", img: "resorse/WhatsApp Image 2026-02-18 at 3.35.59 PM.png" },
     { id: 2, name: "BloomMax Bio-Stimulant", price: 850, category: "Bio-Stimulants", img: "https://images.unsplash.com/photo-1628352081506-83c43123ed6d?auto=format&fit=crop&w=300&q=80" },
     { id: 3, name: "NitroFast Liquid", price: 450, category: "Nutrition", img: "https://images.unsplash.com/photo-1592419044706-39796d40f98c?auto=format&fit=crop&w=300&q=80" }
 ];
